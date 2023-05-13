@@ -41,6 +41,7 @@ router.post(
       user.password = await bcrypt.hash(password, salt);
       user.save();
       console.log(user);
+
       const payload = {
         user: {
           id: user.id,
