@@ -8,6 +8,7 @@ connectDB();
 app.use(express.json({ extended: false }));
 app.use("/api/users", require("./routes/userApi"));
 app.use("/api/products", require("./routes/productApi"));
+app.use("/api/auth", require("./routes/authApi"));
 app.get("/", (req, res) => {
   res.send("app is open");
 });
